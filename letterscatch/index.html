@@ -36,19 +36,63 @@
       <h3>1. Responsable du traitement</h3>
       <p>Le responsable du traitement est David Turbert. Pour toute question ou pour exercer vos droits, écrivez à support@dcyou.co.</p>
       <h3>2. Données que nous collectons</h3>
-      <p>Nous affichons des publicités via Google AdMob dans l’application mobile. Dans l’UE, nous demandons ton consentement (et, sur iOS, l’autorisation App Tracking Transparency) avant toute publicité personnalisée. Nous ne vendons pas tes données.</p>
+      <ul>
+        <li>Pseudo / identifiant — le nom public que vous choisissez. Requis pour jouer.</li>
+        <li>Email et mot de passe — facultatifs. Collectés uniquement si vous liez un email pour récupérer votre compte sur un autre appareil. Le mot de passe est stocké de façon hachée.</li>
+        <li>Localisation GPS — utilisée pour trouver les Totems près de vous et vérifier que vous êtes assez proche pour en attraper un.</li>
+        <li>Photos — les photos de capture et de découverte que tu prends, stockées de façon privée et visibles uniquement par toi et nos modérateurs (voir §5).</li>
+        <li>Localisation approximative — pour trouver les Totems près de toi ; la position GPS précise sert uniquement côté serveur à valider une capture et détecter la triche.</li>
+        <li>Identifiant d’appareil et jeton de notification — si tu actives les notifications, pour te les délivrer.</li>
+        <li>Pays — le pays que tu choisis, pour les classements par pays et la localisation.</li>
+        <li>Adresse IP — pour limiter le débit des requêtes et bloquer les abus automatisés (anti-bot).</li>
+        <li>Données de jeu — points, captures, séries et classements.</li>
+        <li>Jeton d’authentification — stocké sur votre appareil pour vous garder connecté.</li>
+      </ul>
+      <p>Nous affichons des publicités via Google AdMob dans l’application mobile. Lorsque le consentement est requis (notamment dans l’UE), nous te le demandons via le formulaire de Google (UMP) avant toute publicité personnalisée, et tu peux refuser. L’application ne demande jamais l’autorisation de te suivre et n’affiche aucune invite de suivi, sur aucune plateforme : sur iOS, aucun identifiant publicitaire n’est accessible à l’application, si bien que les publicités qui y sont affichées ne sont pas personnalisées ; ailleurs, les publicités ne sont personnalisées que si tu as donné ce consentement dans le formulaire de Google. Nous ne vendons pas tes données.</p>
       <p>Mesure d’audience anonyme Pulse : à chaque ouverture, l’application envoie à notre service Pulse le nom de l’app, sa version, la plateforme et la langue, uniquement pour mesurer l’audience. Pulse ne dépose aucun cookie et l’application n’envoie aucun identifiant d’utilisateur ou d’appareil. Un visiteur unique quotidien est calculé côté serveur à partir des données techniques de la requête au moyen d’un hachage salé non réversible ; seul ce hachage est enregistré pour ce comptage.</p>
       <h3>3. Finalités et base légale (RGPD)</h3>
+      <ul>
+        <li>Consentement — pour l’accès à la localisation GPS, la création/liaison d’un compte et l’envoi des photos. Vous pouvez retirer votre consentement à tout moment.</li>
+        <li>Intérêt légitime — pour faire fonctionner et sécuriser le jeu : votre collection et votre score, la modération, l’anti-triche et le maintien du service.</li>
+        <li>Consentement — pour la personnalisation des publicités (lorsque requis) et les notifications ; tu peux le retirer à tout moment.</li>
+        <li>Intérêt légitime — pour la sécurité et l’anti-bot (IP, reCAPTCHA, Play Integrity) afin de garder le jeu équitable.</li>
+      </ul>
       <h3>4. Modération des photos et règles de contenu</h3>
       <p>Les photos que vous soumettez passent par une modération humaine avant qu’une découverte ne soit créditée.</p>
+      <ul>
+        <li>Ne photographiez pas de personnes identifiables.</li>
+        <li>Ne photographiez pas de propriété privée ni quoi que ce soit qui ne soit pas un panneau d’un lieu public.</li>
+        <li>Nous pouvons rejeter ou supprimer un contenu qui enfreint ces règles, à notre discrétion.</li>
+      </ul>
       <h3>5. Qui peut voir vos données</h3>
+      <ul>
+        <li>Ton pseudo et tes accomplissements peuvent être visibles par les autres joueurs (ex. classements).</li>
+        <li>Tes photos de capture et de découverte sont stockées de façon privée et visibles uniquement par toi et nos modérateurs — elles ne sont jamais publiques.</li>
+        <li>Les emplacements des Totems apparaissent sur la carte à une position approximative, jamais ta position exacte.</li>
+        <li>Ton email, ton mot de passe et ta localisation précise ne sont jamais montrés aux autres joueurs.</li>
+      </ul>
       <h3>6. Hébergement et sous-traitants</h3>
       <p>Notre backend tourne sur Laravel Cloud (Amazon Web Services), région UE. Nous faisons appel aux sous-traitants suivants, chacun uniquement pour la finalité indiquée :</p>
+      <ul>
+        <li>Cloudflare R2 (Laravel Cloud Object Storage, UE) — stocke tes photos dans un bucket privé, servies uniquement via des liens signés temporaires, à toi ou à un modérateur.</li>
+        <li>Google Firebase Cloud Messaging — délivre les notifications push (jeton d’appareil/push uniquement).</li>
+        <li>Google AdMob — affiche des publicités dans l’application mobile (soumis au consentement dans l’UE).</li>
+        <li>Resend — envoie les emails de compte et transactionnels (vérification, réinitialisation du mot de passe).</li>
+        <li>Google reCAPTCHA v3 et Google Play Integrity — contrôles anti-bot à l’inscription (traitent des signaux IP/appareil). ALTCHA, notre propre contrôle, est auto-hébergé et ne partage rien avec des tiers.</li>
+      </ul>
       <h3>7. Nous ne vendons pas vos données</h3>
       <p>Nous ne vendons, ne louons et n’échangeons pas vos données personnelles à qui que ce soit.</p>
       <h3>8. Durée de conservation</h3>
       <p>Nous conservons tes données tant que ton compte est actif. Lorsque tu supprimes ton compte, tes données personnelles — y compris tes photos sur le stockage cloud (Cloudflare R2) — sont supprimées. Les journaux de sécurité/anti-bot (ex. IP) ne sont conservés que brièvement. Nous ne gardons des enregistrements minimaux que lorsque la loi l’exige.</p>
       <h3>9. Vos droits</h3>
+      <ul>
+        <li>Accès aux données que nous détenons sur vous ;</li>
+        <li>Rectification des données inexactes ;</li>
+        <li>Effacement — la suppression du compte est disponible dans l’application ;</li>
+        <li>Portabilité — recevoir vos données dans un format portable ;</li>
+        <li>Opposition au traitement fondé sur l’intérêt légitime ;</li>
+        <li>Retrait du consentement à tout moment.</li>
+      </ul>
       <p>Contactez support@dcyou.co pour exercer ces droits. Vous pouvez aussi introduire une réclamation auprès de la CNIL (www.cnil.fr).</p>
       <h3>10. Enfants</h3>
       <p>LettersCatch n’est pas destiné aux enfants de moins de 13 ans et nous ne collectons pas sciemment leurs données. Contactez-nous si vous pensez qu’un enfant nous a fourni des données et nous les supprimerons.</p>
@@ -58,11 +102,28 @@
       <h3>Aperçu</h3>
       <p>Ces Conditions régissent votre utilisation de LettersCatch, un jeu de géolocalisation dans lequel vous photographiez et collectionnez de grands panneaux-lettres de lieux réels (« Totems »). En utilisant l’application, vous acceptez ces Conditions. Le service est fourni par David Turbert — contact support@dcyou.co.</p>
       <h3>1. Votre compte</h3>
+      <ul>
+        <li>Un pseudo est nécessaire pour jouer ; vous pouvez éventuellement lier un email et un mot de passe pour récupérer votre compte.</li>
+        <li>Vous êtes responsable de la sécurité de vos identifiants et de l’activité sur votre compte.</li>
+        <li>Vous devez avoir au moins 13 ans pour utiliser l’application. Si vous n’avez pas l’âge du consentement numérique dans votre pays, vous confirmez qu’un parent ou tuteur a accepté ces conditions en votre nom.</li>
+      </ul>
       <h3>2. Utilisation acceptable</h3>
       <p>Vous vous engagez à utiliser LettersCatch de manière légale et respectueuse. Vous ne devez pas :</p>
+      <ul>
+        <li>Enfreindre une loi applicable, ni pénétrer sur une propriété privée pour capturer un Totem ;</li>
+        <li>Photographier des personnes identifiables ou des propriétés privées ;</li>
+        <li>Soumettre un contenu illégal, offensant, trompeur ou portant atteinte aux droits d’autrui ;</li>
+        <li>Harceler d’autres joueurs ou abuser du service ;</li>
+        <li>Perturber, désosser (reverse engineering) ou accéder sans autorisation à l’application ou à ses systèmes.</li>
+      </ul>
       <h3>3. Jouez prudemment</h3>
       <p>Restez toujours attentif à votre environnement. N’utilisez pas l’application en conduisant ni dans toute situation où elle pourrait vous mettre en danger, vous ou autrui.</p>
       <h3>4. Anti-triche et fair-play</h3>
+      <ul>
+        <li>L’usurpation de localisation est interdite — falsifier, simuler ou manipuler votre position GPS est strictement interdit.</li>
+        <li>Nous utilisons des contrôles automatisés (ex. vitesse de déplacement impossible entre captures) pour détecter la triche.</li>
+        <li>Nous pouvons réinitialiser des scores, retirer des captures, suspendre ou supprimer les comptes qui trichent ou abusent du système.</li>
+      </ul>
       <h3>5. Contenu utilisateur et licence</h3>
       <p>Vous conservez la propriété des photos et Totems que vous soumettez. En les soumettant, vous accordez à LettersCatch une licence mondiale, non exclusive et gratuite pour héberger, stocker, reproduire et afficher ce contenu au sein de l’application pour faire fonctionner le jeu, y compris le stockage sur un cloud privé et la revue par nos modérateurs. Vous déclarez disposer du droit de le soumettre et qu’il n’enfreint ni ces Conditions ni aucune loi.</p>
       <h3>6. Modération et suppression</h3>
@@ -84,23 +145,67 @@
   <section id="en">
     <h2>Privacy Policy</h2>
       <h3>Overview</h3>
-      <p>This Privacy Policy explains what personal data LettersCatch collects, why, how we use it, and the rights you have over it. LettersCatch is a location-based game where you photograph and collect real-world giant letter signs of places (\"Totems\").</p>
+      <p>This Privacy Policy explains what personal data LettersCatch collects, why, how we use it, and the rights you have over it. LettersCatch is a location-based game where you photograph and collect real-world giant letter signs of places ("Totems").</p>
       <h3>1. Who is responsible for your data</h3>
       <p>The data controller is David Turbert. For any question or to exercise your rights, write to support@dcyou.co.</p>
       <h3>2. What data we collect</h3>
-      <p>We show ads via Google AdMob in the mobile app. In the EU we ask for your consent (and, on iOS, App Tracking Transparency) before any personalised ads. We do not sell your data.</p>
+      <ul>
+        <li>Nickname / handle — the public name you choose. Required to play.</li>
+        <li>Email and password — optional. Only collected if you link an email to recover your account on another device. The password is stored hashed.</li>
+        <li>GPS location — used to find Totems near you and verify you are close enough to catch one.</li>
+        <li>Photos — the catch and discovery photos you take, stored privately and visible only to you and our moderators (see §5).</li>
+        <li>Approximate location — to find Totems near you; precise GPS is used only server-side to verify a catch and detect cheating.</li>
+        <li>Device identifier and push token — if you enable notifications, to deliver them.</li>
+        <li>Country — the country you choose, for country leaderboards and localisation.</li>
+        <li>IP address — to rate-limit requests and block automated abuse (anti-bot).</li>
+        <li>Gameplay data — points, catches and rankings.</li>
+        <li>Authentication token — stored on your device so you stay signed in.</li>
+      </ul>
+      <p>We show ads via Google AdMob in the mobile app. Where consent is required (in particular in the EU), we ask for it through Google's own form (UMP) before any personalised ads, and you can refuse. The app never asks for permission to track you and shows no tracking prompt on any platform: on iOS no advertising identifier is available to the app, so the ads shown there are not personalised; elsewhere, ads are personalised only if you gave that consent in Google's form. We do not sell your data.</p>
       <p>Anonymous audience measurement with Pulse: each time the app opens, it sends our Pulse service the app name, version, platform and language solely to measure audience. Pulse sets no cookie and the app sends no user or device identifier. A daily unique visitor is calculated server-side from the request’s technical data using a salted, non-reversible hash; only that hash is stored for this count.</p>
       <h3>3. Why we use your data (GDPR lawful basis)</h3>
+      <ul>
+        <li>Consent — for GPS location access, creating/linking an account, and uploading the photos you submit. You can withdraw consent at any time.</li>
+        <li>Legitimate interest — for running and securing the game: your collection and score, moderation, anti-cheat and keeping the service working.</li>
+        <li>Consent — for ad personalisation (where required) and notifications; you can withdraw it at any time.</li>
+        <li>Legitimate interest — for security and anti-bot (IP, reCAPTCHA, Play Integrity) to keep the game fair.</li>
+      </ul>
       <h3>4. Photo moderation and content rules</h3>
       <p>Photos you submit go through human moderation before a discovery is credited.</p>
+      <ul>
+        <li>Do not photograph identifiable people.</li>
+        <li>Do not photograph private property or anything that is not a public place sign.</li>
+        <li>We may reject or remove content that breaks these rules, at our discretion.</li>
+      </ul>
       <h3>5. Who can see your data</h3>
+      <ul>
+        <li>Your nickname and in-game achievements may be visible to other players (e.g. rankings).</li>
+        <li>Your catch and discovery photos are stored privately and are visible only to you and our moderators — they are never shown publicly.</li>
+        <li>Totem locations appear on the map at an approximate position, never your exact device location.</li>
+        <li>Your email, password and precise location are never shown to other players.</li>
+      </ul>
       <h3>6. Hosting and processors</h3>
       <p>Our backend runs on Laravel Cloud (Amazon Web Services), EU region. We use the following processors, each only for the purpose stated:</p>
+      <ul>
+        <li>Cloudflare R2 (Laravel Cloud Object Storage, EU) — stores your photos in a private bucket, served only via short-lived signed links to you or a moderator.</li>
+        <li>Google Firebase Cloud Messaging — delivers push notifications (device/push token only).</li>
+        <li>Google AdMob — serves ads in the mobile app (consent-gated in the EU).</li>
+        <li>Resend — sends account and transactional emails (verification, password reset).</li>
+        <li>Google reCAPTCHA v3 and Google Play Integrity — anti-bot checks at sign-up (process IP/device signals). ALTCHA, our own check, is self-hosted and shares nothing with third parties.</li>
+      </ul>
       <h3>7. We do not sell your data</h3>
       <p>We do not sell, rent or trade your personal data to anyone.</p>
       <h3>8. How long we keep your data</h3>
       <p>We keep your data while your account is active. When you delete your account, your personal data — including your photos on cloud storage (Cloudflare R2) — is deleted. Security/anti-bot logs (e.g. IP) are kept only briefly. We retain minimal records only where the law requires.</p>
       <h3>9. Your rights</h3>
+      <ul>
+        <li>Access the data we hold about you;</li>
+        <li>Rectify inaccurate data;</li>
+        <li>Erase your data — account deletion is available in the app;</li>
+        <li>Portability — receive your data in a portable format;</li>
+        <li>Object to processing based on legitimate interest;</li>
+        <li>Withdraw consent at any time.</li>
+      </ul>
       <p>Contact support@dcyou.co to exercise these rights. You may also lodge a complaint with the French data protection authority, the CNIL (www.cnil.fr).</p>
       <h3>10. Children</h3>
       <p>LettersCatch is not directed at children under 13 and we do not knowingly collect their data. Contact us if you believe a child has provided us with data and we will delete it.</p>
@@ -108,19 +213,36 @@
       <p>We may update this policy from time to time. We will update the date above and, for significant changes, notify you in the app.</p>
     <h2>Terms of Service</h2>
       <h3>Overview</h3>
-      <p>These Terms govern your use of LettersCatch, a location-based game where you photograph and collect real-world giant letter signs of places (\"Totems\"). By using the app you agree to these Terms. The service is provided by David Turbert — contact support@dcyou.co.</p>
+      <p>These Terms govern your use of LettersCatch, a location-based game where you photograph and collect real-world giant letter signs of places ("Totems"). By using the app you agree to these Terms. The service is provided by David Turbert — contact support@dcyou.co.</p>
       <h3>1. Your account</h3>
+      <ul>
+        <li>You need a nickname to play; you may optionally link an email and password to recover your account.</li>
+        <li>You are responsible for keeping your credentials secure and for activity on your account.</li>
+        <li>You must be at least 13 years old to use the app. If you are below the age of digital consent in your country, you confirm that a parent or guardian has agreed to these Terms on your behalf.</li>
+      </ul>
       <h3>2. Acceptable use</h3>
       <p>You agree to use LettersCatch lawfully and respectfully. You must not:</p>
+      <ul>
+        <li>Break any applicable law, or trespass on private property to capture a Totem;</li>
+        <li>Photograph identifiable people or private property;</li>
+        <li>Submit content that is illegal, offensive, misleading, or infringes others' rights;</li>
+        <li>Harass other players or abuse the service;</li>
+        <li>Disrupt, reverse-engineer, or gain unauthorized access to the app or its systems.</li>
+      </ul>
       <h3>3. Play safely</h3>
       <p>Always be aware of your surroundings. Do not use the app while driving or in any situation where it could put you or others at risk.</p>
       <h3>4. Anti-cheat and fair play</h3>
+      <ul>
+        <li>Location spoofing is forbidden — faking, simulating or manipulating your GPS position is strictly prohibited.</li>
+        <li>We use automated checks (e.g. impossible travel speed between captures) to detect cheating.</li>
+        <li>We may reset scores, remove catches, suspend or terminate accounts that cheat or abuse the system.</li>
+      </ul>
       <h3>5. User content and license</h3>
       <p>You keep ownership of the photos and Totems you submit. By submitting them, you grant LettersCatch a worldwide, non-exclusive, royalty-free license to host, store, reproduce and display that content within the app to operate the game, including storing it on private cloud storage and review by our moderators. You represent that you have the right to submit it and that it does not break these Terms or any law.</p>
       <h3>6. Moderation and removal</h3>
       <p>Submitted content goes through human moderation. We may review, reject, edit or remove any content, and refuse to credit a discovery, at our discretion. We are not obligated to publish or keep any content.</p>
       <h3>7. Availability and changes</h3>
-      <p>The app is offered \"as is\". We may add, change, suspend or discontinue features at any time and do not guarantee uninterrupted or error-free availability.</p>
+      <p>The app is offered "as is". We may add, change, suspend or discontinue features at any time and do not guarantee uninterrupted or error-free availability.</p>
       <h3>8. No warranty</h3>
       <p>To the maximum extent permitted by law, the app is provided without warranties of any kind, express or implied, including fitness for a particular purpose, accuracy of location data, or availability.</p>
       <h3>9. Limitation of liability</h3>
