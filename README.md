@@ -33,19 +33,20 @@ Avant de publier :
 
 ## `/legal/letterscatch/` — URL déclarée, à ne pas casser
 
-Cette adresse est déclarée à Apple **et** à Google pour une app en cours de
-validation. Elle doit répondre **200**, sans redirection, à tout moment : ne pas
+Cette adresse est déclarée à Apple **et** à Google pour une app publiée sur les
+deux stores. Elle doit répondre **200**, sans redirection, à tout moment : ne pas
 la renommer, ne pas la déplacer, ne pas la supprimer. Toute intervention sur ce
 dépôt se termine par une vérification de cette URL.
 
 Cette page n'est **pas** produite par Cockpit : elle sort de
 `LettersCatch/front/scripts/legal-page.mjs`, en six langues, à partir de
 `front/src/data/legal.js` (`npm run legal:page -- --out ../../legal-site`
-depuis `front/`). Elle porte un **avis transitoire** : le texte décrit la
-prochaine version, alors que l'iOS 1.7.8 et antérieures peuvent encore afficher
-l'invite de suivi d'Apple. Le retirer quand la version suivante est en store
-(`TRANSITION_NOTICE = null`, puis régénérer). La régénérer avec Cockpit
-effacerait l'avis, les listes et quatre des six langues.
+depuis `front/`). L'avis transitoire sur l'iOS 1.7.8 est retiré depuis que la
+1.8.2 l'a remplacée sur les deux stores (6 octobre 2026) : `TRANSITION_NOTICE`
+vaut `null`. Si une version future change ce que dit la politique avant d'être
+en store, le remettre dans `legal-page.mjs`, régénérer, puis le retirer une fois
+cette version publiée. La régénérer avec Cockpit effacerait les listes et quatre
+des six langues.
 
 ## Vérifier après un push (GitHub Pages met ~1 minute)
 
