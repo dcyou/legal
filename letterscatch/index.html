@@ -27,7 +27,7 @@
 <header>
   <h1>LettersCatch</h1>
   <p class="muted">Publisher: dcyou — contact: <a href="mailto:support@dcyou.co">support@dcyou.co</a></p>
-  <p class="muted">Last updated: 2026-10-05</p>
+  <p class="muted">Last updated: 2026-10-19</p>
   <nav><a href="#en">English</a><a href="#fr">Français</a><a href="#es">Español</a><a href="#de">Deutsch</a><a href="#it">Italiano</a><a href="#pt-BR">Português (Brasil)</a></nav>
 </header>
 <main>
@@ -49,6 +49,7 @@
         <li>IP address — to rate-limit requests and block automated abuse (anti-bot).</li>
         <li>Gameplay data — points, catches and rankings.</li>
         <li>Authentication token — stored on your device so you stay signed in.</li>
+        <li>Reports and blocks — when you report a player, a Crew or a Totem, we keep who reported what, when and why (a reason picked from a list, no free text); when you block a player, we keep that choice.</li>
       </ul>
       <p>We show ads via Google AdMob in the mobile app. The app asks Google for non-personalised ads on every platform, so the ads shown are not personalised. Where consent is required (in particular in the EU), we ask for it through Google's own form (UMP), and you can refuse. The app never asks for permission to track you and shows no tracking prompt on any platform. If you allowed tracking in an earlier version of the iOS app, you can withdraw that permission at any time in your device's Settings › Privacy &amp; Security › Tracking. We do not sell your data.</p>
       <p>Anonymous audience measurement with Pulse: each time the app opens, it sends our Pulse service the app name, version, platform and language solely to measure audience. Pulse sets no cookie and the app sends no user or device identifier. A daily unique visitor is calculated server-side from the request’s technical data using a salted, non-reversible hash; only that hash is stored for this count.</p>
@@ -70,9 +71,11 @@
       <h3>5. Who can see your data</h3>
       <ul>
         <li>Your nickname and in-game achievements may be visible to other players (e.g. rankings).</li>
+        <li>Your catches are never shown to other players with your nickname: they only learn, hours later, that someone caught a Totem — today, this week or earlier, never the exact time. That you discovered a new Totem is shown to them only after the same delay.</li>
         <li>Your catch and discovery photos are stored privately and are visible only to you and our moderators — they are never shown publicly.</li>
         <li>Totem locations appear on the map at an approximate position, never your exact device location.</li>
         <li>Your email, password and precise location are never shown to other players.</li>
+        <li>A report is never shown to the player or Crew reported, and a block is never shown to the player blocked.</li>
       </ul>
       <h3>6. Hosting and processors</h3>
       <p>Our backend runs on Laravel Cloud (Amazon Web Services), EU region. We use the following processors, each only for the purpose stated:</p>
@@ -86,7 +89,7 @@
       <h3>7. We do not sell your data</h3>
       <p>We do not sell, rent or trade your personal data to anyone.</p>
       <h3>8. How long we keep your data</h3>
-      <p>We keep your data while your account is active. When you delete your account, your personal data — including your photos on cloud storage (Cloudflare R2) — is deleted. Security/anti-bot logs (e.g. IP) are kept only briefly. We retain minimal records only where the law requires.</p>
+      <p>We keep your data while your account is active. When you delete your account, your personal data — including your photos on cloud storage (Cloudflare R2) — is deleted. Security/anti-bot logs (e.g. IP) are kept only briefly. We retain minimal records only where the law requires. Reports are kept until they are reviewed, then for 12 months; if you delete your account, the reports you made are kept without your identity until then. Blocks are kept until you lift them or delete your account.</p>
       <h3>9. Your rights</h3>
       <ul>
         <li>Access the data we hold about you;</li>
@@ -111,11 +114,12 @@
         <li>You must be at least 13 years old to use the app. If you are below the age of digital consent in your country, you confirm that a parent or guardian has agreed to these Terms on your behalf.</li>
       </ul>
       <h3>2. Acceptable use</h3>
-      <p>You agree to use LettersCatch lawfully and respectfully. You must not:</p>
+      <p>LettersCatch has zero tolerance for objectionable content and for abusive users. You agree to use LettersCatch lawfully and respectfully. You must not:</p>
       <ul>
         <li>Break any applicable law, or trespass on private property to capture a Totem;</li>
         <li>Photograph identifiable people or private property;</li>
         <li>Submit content that is illegal, offensive, misleading, or infringes others' rights;</li>
+        <li>Choose a nickname or a Crew name, or propose a Totem name, that is offensive, hateful or sexual, or that impersonates someone;</li>
         <li>Harass other players or abuse the service;</li>
         <li>Disrupt, reverse-engineer, or gain unauthorized access to the app or its systems.</li>
       </ul>
@@ -129,8 +133,14 @@
       </ul>
       <h3>5. User content and license</h3>
       <p>You keep ownership of the photos and Totems you submit. By submitting them, you grant LettersCatch a worldwide, non-exclusive, royalty-free license to host, store, reproduce and display that content within the app to operate the game, including storing it on private cloud storage and review by our moderators. You represent that you have the right to submit it and that it does not break these Terms or any law.</p>
-      <h3>6. Moderation and removal</h3>
+      <h3>6. Moderation, reporting and blocking</h3>
       <p>Submitted content goes through human moderation. We may review, reject, edit or remove any content, and refuse to credit a discovery, at our discretion. We are not obligated to publish or keep any content.</p>
+      <ul>
+        <li>Nicknames and Crew names are checked automatically when they are chosen, and offensive ones are refused.</li>
+        <li>You can report a player, a Crew or a Totem from the app, or by writing to support@dcyou.co. A nickname or Crew name reported by several players is hidden from everyone until we review it.</li>
+        <li>You can block a player from the app: you no longer see their nickname — in rankings, in your Crew or on the Totems they discovered — nor the name of a Crew they lead, and neither of you can join a Crew the other is in. You can unblock them at any time.</li>
+        <li>We review every report within 24 hours. Content that breaks these Terms is removed — the nickname or Crew name is replaced, the Totem is withdrawn — and the account of the user who posted it is suspended or, for serious or repeated abuse, permanently banned.</li>
+      </ul>
       <h3>7. Availability and changes</h3>
       <p>The app is offered &quot;as is&quot;. We may add, change, suspend or discontinue features at any time and do not guarantee uninterrupted or error-free availability.</p>
       <h3>8. No warranty</h3>
@@ -163,6 +173,7 @@
         <li>Adresse IP — pour limiter le débit des requêtes et bloquer les abus automatisés (anti-bot).</li>
         <li>Données de jeu — points, captures, séries et classements.</li>
         <li>Jeton d’authentification — stocké sur votre appareil pour vous garder connecté.</li>
+        <li>Signalements et blocages — quand tu signales un joueur, un Crew ou un Totem, nous conservons qui a signalé quoi, quand et pourquoi (un motif choisi dans une liste, sans texte libre) ; quand tu bloques un joueur, nous conservons ce choix.</li>
       </ul>
       <p>Nous affichons des publicités via Google AdMob dans l’application mobile. L’application demande à Google des publicités non personnalisées sur toutes les plateformes : les publicités affichées ne sont pas personnalisées. Lorsque le consentement est requis (notamment dans l’UE), nous te le demandons via le formulaire de Google (UMP), et tu peux refuser. L’application ne demande jamais l’autorisation de te suivre et n’affiche aucune invite de suivi, sur aucune plateforme. Si tu as autorisé le suivi dans une version antérieure de l’application iOS, tu peux retirer cette autorisation à tout moment dans Réglages › Confidentialité et sécurité › Suivi de ton appareil. Nous ne vendons pas tes données.</p>
       <p>Mesure d’audience anonyme Pulse : à chaque ouverture, l’application envoie à notre service Pulse le nom de l’app, sa version, la plateforme et la langue, uniquement pour mesurer l’audience. Pulse ne dépose aucun cookie et l’application n’envoie aucun identifiant d’utilisateur ou d’appareil. Un visiteur unique quotidien est calculé côté serveur à partir des données techniques de la requête au moyen d’un hachage salé non réversible ; seul ce hachage est enregistré pour ce comptage.</p>
@@ -184,9 +195,11 @@
       <h3>5. Qui peut voir vos données</h3>
       <ul>
         <li>Ton pseudo et tes accomplissements peuvent être visibles par les autres joueurs (ex. classements).</li>
+        <li>Tes captures ne sont jamais montrées aux autres joueurs avec ton pseudo : ils apprennent seulement, des heures plus tard, que quelqu’un a capturé un Totem — aujourd’hui, cette semaine ou plus tôt, jamais l’heure exacte. Le fait que tu as découvert un nouveau Totem ne leur est montré qu’après le même délai.</li>
         <li>Tes photos de capture et de découverte sont stockées de façon privée et visibles uniquement par toi et nos modérateurs — elles ne sont jamais publiques.</li>
         <li>Les emplacements des Totems apparaissent sur la carte à une position approximative, jamais ta position exacte.</li>
         <li>Ton email, ton mot de passe et ta localisation précise ne sont jamais montrés aux autres joueurs.</li>
+        <li>Un signalement n’est jamais montré au joueur ou au Crew signalé, ni un blocage au joueur bloqué.</li>
       </ul>
       <h3>6. Hébergement et sous-traitants</h3>
       <p>Notre backend tourne sur Laravel Cloud (Amazon Web Services), région UE. Nous faisons appel aux sous-traitants suivants, chacun uniquement pour la finalité indiquée :</p>
@@ -200,7 +213,7 @@
       <h3>7. Nous ne vendons pas vos données</h3>
       <p>Nous ne vendons, ne louons et n’échangeons pas vos données personnelles à qui que ce soit.</p>
       <h3>8. Durée de conservation</h3>
-      <p>Nous conservons tes données tant que ton compte est actif. Lorsque tu supprimes ton compte, tes données personnelles — y compris tes photos sur le stockage cloud (Cloudflare R2) — sont supprimées. Les journaux de sécurité/anti-bot (ex. IP) ne sont conservés que brièvement. Nous ne gardons des enregistrements minimaux que lorsque la loi l’exige.</p>
+      <p>Nous conservons tes données tant que ton compte est actif. Lorsque tu supprimes ton compte, tes données personnelles — y compris tes photos sur le stockage cloud (Cloudflare R2) — sont supprimées. Les journaux de sécurité/anti-bot (ex. IP) ne sont conservés que brièvement. Nous ne gardons des enregistrements minimaux que lorsque la loi l’exige. Les signalements sont conservés jusqu’à leur examen, puis 12 mois ; si tu supprimes ton compte, ceux que tu as faits restent, sans ton identité, jusqu’à cette échéance. Les blocages sont conservés jusqu’à ce que tu les lèves ou supprimes ton compte.</p>
       <h3>9. Vos droits</h3>
       <ul>
         <li>Accès aux données que nous détenons sur vous ;</li>
@@ -225,11 +238,12 @@
         <li>Vous devez avoir au moins 13 ans pour utiliser l’application. Si vous n’avez pas l’âge du consentement numérique dans votre pays, vous confirmez qu’un parent ou tuteur a accepté ces conditions en votre nom.</li>
       </ul>
       <h3>2. Utilisation acceptable</h3>
-      <p>Vous vous engagez à utiliser LettersCatch de manière légale et respectueuse. Vous ne devez pas :</p>
+      <p>LettersCatch applique une tolérance zéro envers les contenus répréhensibles et les utilisateurs abusifs. Vous vous engagez à utiliser LettersCatch de manière légale et respectueuse. Vous ne devez pas :</p>
       <ul>
         <li>Enfreindre une loi applicable, ni pénétrer sur une propriété privée pour capturer un Totem ;</li>
         <li>Photographier des personnes identifiables ou des propriétés privées ;</li>
         <li>Soumettre un contenu illégal, offensant, trompeur ou portant atteinte aux droits d’autrui ;</li>
+        <li>Choisir un pseudo ou un nom de Crew, ou proposer un nom de Totem, injurieux, haineux ou à caractère sexuel, ou qui usurpe l’identité de quelqu’un ;</li>
         <li>Harceler d’autres joueurs ou abuser du service ;</li>
         <li>Perturber, désosser (reverse engineering) ou accéder sans autorisation à l’application ou à ses systèmes.</li>
       </ul>
@@ -243,8 +257,14 @@
       </ul>
       <h3>5. Contenu utilisateur et licence</h3>
       <p>Vous conservez la propriété des photos et Totems que vous soumettez. En les soumettant, vous accordez à LettersCatch une licence mondiale, non exclusive et gratuite pour héberger, stocker, reproduire et afficher ce contenu au sein de l’application pour faire fonctionner le jeu, y compris le stockage sur un cloud privé et la revue par nos modérateurs. Vous déclarez disposer du droit de le soumettre et qu’il n’enfreint ni ces Conditions ni aucune loi.</p>
-      <h3>6. Modération et suppression</h3>
+      <h3>6. Modération, signalement et blocage</h3>
       <p>Le contenu soumis passe par une modération humaine. Nous pouvons examiner, refuser, modifier ou supprimer tout contenu, et refuser de créditer une découverte, à notre discrétion. Nous ne sommes pas tenus de publier ni de conserver un contenu.</p>
+      <ul>
+        <li>Les pseudos et les noms de Crew sont vérifiés automatiquement au moment où ils sont choisis, et ceux qui sont injurieux sont refusés.</li>
+        <li>Vous pouvez signaler un joueur, un Crew ou un Totem depuis l’application, ou en écrivant à support@dcyou.co. Un pseudo ou un nom de Crew signalé par plusieurs joueurs est masqué pour tous jusqu’à notre examen.</li>
+        <li>Vous pouvez bloquer un joueur depuis l’application : vous ne voyez plus son pseudo — dans les classements, dans votre Crew ou sur les Totems qu’il a découverts — ni le nom d’un Crew qu’il dirige, et aucun de vous deux ne peut rejoindre un Crew où se trouve l’autre. Vous pouvez le débloquer à tout moment.</li>
+        <li>Nous examinons chaque signalement sous 24 heures. Un contenu contraire aux présentes Conditions est supprimé — le pseudo ou le nom de Crew est remplacé, le Totem est retiré du jeu — et le compte de son auteur est suspendu ou, en cas d’abus grave ou répété, banni définitivement.</li>
+      </ul>
       <h3>7. Disponibilité et évolutions</h3>
       <p>L’application est fournie « en l’état ». Nous pouvons ajouter, modifier, suspendre ou interrompre des fonctionnalités à tout moment et ne garantissons pas une disponibilité ininterrompue ou sans erreur.</p>
       <h3>8. Absence de garantie</h3>
@@ -277,6 +297,7 @@
         <li>Dirección IP: para limitar la frecuencia de las solicitudes y bloquear los abusos automatizados (anti-bot).</li>
         <li>Datos de juego: puntos, capturas y clasificaciones.</li>
         <li>Token de autenticación: almacenado en tu dispositivo para que sigas con la sesión iniciada.</li>
+        <li>Denuncias y bloqueos — cuando denuncias a un jugador, un Crew o un Totem, guardamos quién denunció qué, cuándo y por qué (un motivo elegido de una lista, sin texto libre); cuando bloqueas a un jugador, guardamos esa elección.</li>
       </ul>
       <p>Mostramos anuncios a través de Google AdMob en la aplicación móvil. La aplicación pide a Google anuncios no personalizados en todas las plataformas, por lo que los anuncios que se muestran no están personalizados. Cuando se requiere consentimiento (en particular en la UE), te lo pedimos mediante el propio formulario de Google (UMP), y puedes rechazarlo. La aplicación nunca pide permiso para rastrearte ni muestra ningún aviso de seguimiento en ninguna plataforma. Si permitiste el rastreo en una versión anterior de la aplicación para iOS, puedes retirar ese permiso en cualquier momento en Ajustes › Privacidad y seguridad › Rastreo de tu dispositivo. No vendemos tus datos.</p>
       <p>Medición de audiencia anónima con Pulse: cada vez que se abre la aplicación, envía a nuestro servicio Pulse el nombre de la aplicación, su versión, la plataforma y el idioma, únicamente para medir la audiencia. Pulse no instala ninguna cookie y la aplicación no envía ningún identificador de usuario ni de dispositivo. Un visitante único diario se calcula en el servidor a partir de los datos técnicos de la solicitud mediante un hash con sal no reversible; solo ese hash se almacena para este recuento.</p>
@@ -298,9 +319,11 @@
       <h3>5. Quién puede ver tus datos</h3>
       <ul>
         <li>Tu apodo y tus logros dentro del juego pueden ser visibles para otros jugadores (por ejemplo, en las clasificaciones).</li>
+        <li>Tus capturas nunca se muestran a otros jugadores con tu apodo: solo saben, horas después, que alguien capturó un Totem —hoy, esta semana o antes, nunca la hora exacta—. Que descubriste un nuevo Totem solo se les muestra tras el mismo plazo.</li>
         <li>Tus fotos de captura y descubrimiento se almacenan de forma privada y solo son visibles para ti y nuestros moderadores; nunca se muestran públicamente.</li>
         <li>Las ubicaciones de los Totems aparecen en el mapa en una posición aproximada, nunca tu ubicación exacta del dispositivo.</li>
         <li>Tu correo electrónico, contraseña y ubicación precisa nunca se muestran a otros jugadores.</li>
+        <li>Una denuncia nunca se muestra al jugador o al Crew denunciado, ni un bloqueo al jugador bloqueado.</li>
       </ul>
       <h3>6. Alojamiento y encargados del tratamiento</h3>
       <p>Nuestro backend funciona en Laravel Cloud (Amazon Web Services), región de la UE. Recurrimos a los siguientes encargados del tratamiento, cada uno únicamente para la finalidad indicada:</p>
@@ -314,7 +337,7 @@
       <h3>7. No vendemos tus datos</h3>
       <p>No vendemos, alquilamos ni intercambiamos tus datos personales con nadie.</p>
       <h3>8. Cuánto tiempo conservamos tus datos</h3>
-      <p>Conservamos tus datos mientras tu cuenta esté activa. Cuando eliminas tu cuenta, tus datos personales —incluidas tus fotos en el almacenamiento en la nube (Cloudflare R2)— se eliminan. Los registros de seguridad/anti-bot (por ejemplo, la IP) solo se conservan durante un breve periodo. Conservamos registros mínimos únicamente cuando la ley lo exige.</p>
+      <p>Conservamos tus datos mientras tu cuenta esté activa. Cuando eliminas tu cuenta, tus datos personales —incluidas tus fotos en el almacenamiento en la nube (Cloudflare R2)— se eliminan. Los registros de seguridad/anti-bot (por ejemplo, la IP) solo se conservan durante un breve periodo. Conservamos registros mínimos únicamente cuando la ley lo exige. Las denuncias se conservan hasta su revisión y después 12 meses; si eliminas tu cuenta, las que hiciste se conservan sin tu identidad hasta ese plazo. Los bloqueos se conservan hasta que los retires o elimines tu cuenta.</p>
       <h3>9. Tus derechos</h3>
       <ul>
         <li>Acceder a los datos que tenemos sobre ti;</li>
@@ -339,11 +362,12 @@
         <li>Debes tener al menos 13 años para usar la aplicación. Si no tienes la edad de consentimiento digital en tu país, confirmas que un padre, madre o tutor ha aceptado estas Condiciones en tu nombre.</li>
       </ul>
       <h3>2. Uso aceptable</h3>
-      <p>Te comprometes a usar LettersCatch de forma lícita y respetuosa. No debes:</p>
+      <p>LettersCatch tiene tolerancia cero con el contenido inaceptable y con los usuarios abusivos. Te comprometes a usar LettersCatch de forma lícita y respetuosa. No debes:</p>
       <ul>
         <li>Infringir ninguna ley aplicable ni entrar sin autorización en propiedades privadas para capturar un Totem;</li>
         <li>Fotografiar a personas identificables o propiedades privadas;</li>
         <li>Enviar contenido ilegal, ofensivo, engañoso o que vulnere los derechos de terceros;</li>
+        <li>Elegir un apodo o un nombre de Crew, o proponer un nombre de Totem, que sea ofensivo, de odio o sexual, o que suplante la identidad de alguien;</li>
         <li>Acosar a otros jugadores o abusar del servicio;</li>
         <li>Interferir, aplicar ingeniería inversa u obtener acceso no autorizado a la aplicación o sus sistemas.</li>
       </ul>
@@ -357,8 +381,14 @@
       </ul>
       <h3>5. Contenido del usuario y licencia</h3>
       <p>Conservas la propiedad de las fotos y los Totems que envías. Al enviarlos, concedes a LettersCatch una licencia mundial, no exclusiva y libre de regalías para alojar, almacenar, reproducir y mostrar ese contenido dentro de la aplicación con el fin de operar el juego, incluido su almacenamiento en una nube privada y la revisión por parte de nuestros moderadores. Declaras que tienes derecho a enviarlo y que no incumple estos Términos ni ninguna ley.</p>
-      <h3>6. Moderación y eliminación</h3>
+      <h3>6. Moderación, denuncias y bloqueo</h3>
       <p>El contenido enviado pasa por una moderación humana. Podemos revisar, rechazar, editar o eliminar cualquier contenido, y negarnos a acreditar un descubrimiento, a nuestra discreción. No estamos obligados a publicar ni conservar ningún contenido.</p>
+      <ul>
+        <li>Los apodos y los nombres de Crew se revisan automáticamente al elegirlos, y se rechazan los ofensivos.</li>
+        <li>Puedes denunciar a un jugador, un Crew o un Totem desde la aplicación, o escribiendo a support@dcyou.co. Un apodo o un nombre de Crew denunciado por varios jugadores se oculta para todos hasta que lo revisemos.</li>
+        <li>Puedes bloquear a un jugador desde la aplicación: dejas de ver su apodo —en las clasificaciones, en tu Crew o en los Totems que descubrió— y el nombre de un Crew que dirija, y ninguno de los dos puede unirse a un Crew en el que esté el otro. Puedes desbloquearlo en cualquier momento.</li>
+        <li>Revisamos cada denuncia en un plazo de 24 horas. El contenido que infringe estos Términos se elimina —el apodo o el nombre de Crew se sustituye y el Totem se retira— y la cuenta de su autor se suspende o, en caso de abuso grave o reiterado, se bloquea de forma permanente.</li>
+      </ul>
       <h3>7. Disponibilidad y cambios</h3>
       <p>La aplicación se ofrece &quot;tal cual&quot;. Podemos añadir, modificar, suspender o suprimir funciones en cualquier momento y no garantizamos una disponibilidad ininterrumpida ni libre de errores.</p>
       <h3>8. Ausencia de garantía</h3>
@@ -391,6 +421,7 @@
         <li>IP-Adresse – um Anfragen zu drosseln und automatisierten Missbrauch zu blockieren (Anti-Bot).</li>
         <li>Spieldaten – Punkte, Funde und Ranglisten.</li>
         <li>Authentifizierungs-Token – wird auf deinem Gerät gespeichert, damit du angemeldet bleibst.</li>
+        <li>Meldungen und Blockierungen – wenn du einen Spieler, eine Crew oder ein Totem meldest, speichern wir, wer was wann und warum gemeldet hat (ein Grund aus einer Liste, kein Freitext); wenn du einen Spieler blockierst, speichern wir diese Entscheidung.</li>
       </ul>
       <p>Wir zeigen in der mobilen App Werbung über Google AdMob an. Die App fordert bei Google auf allen Plattformen nicht personalisierte Werbung an, daher ist die angezeigte Werbung nicht personalisiert. Wo eine Einwilligung erforderlich ist (insbesondere in der EU), holen wir sie über das Formular von Google (UMP) ein – du kannst sie ablehnen. Die App fragt nie um Erlaubnis, dich zu verfolgen, und zeigt auf keiner Plattform eine Tracking-Abfrage. Falls du das Tracking in einer früheren Version der iOS-App erlaubt hast, kannst du diese Erlaubnis jederzeit auf deinem Gerät unter Einstellungen › Datenschutz &amp; Sicherheit › Tracking widerrufen. Wir verkaufen deine Daten nicht.</p>
       <p>Anonyme Reichweitenmessung mit Pulse: Bei jedem Öffnen sendet die App an unseren Dienst Pulse den Namen der App, ihre Version, die Plattform und die Sprache – ausschließlich zur Reichweitenmessung. Pulse setzt kein Cookie, und die App sendet keine Nutzer- oder Gerätekennung. Ein täglicher eindeutiger Besucher wird serverseitig aus den technischen Daten der Anfrage mithilfe eines gesalzenen, nicht umkehrbaren Hashs berechnet; nur dieser Hash wird für diese Zählung gespeichert.</p>
@@ -412,9 +443,11 @@
       <h3>5. Wer deine Daten sehen kann</h3>
       <ul>
         <li>Dein Spitzname und deine spielinternen Erfolge können für andere Spieler sichtbar sein (z. B. in Ranglisten).</li>
+        <li>Deine Fänge werden anderen Spielern nie mit deinem Spitznamen gezeigt: Sie erfahren erst Stunden später, dass jemand ein Totem gefangen hat – heute, diese Woche oder früher, nie die genaue Uhrzeit. Dass du ein neues Totem entdeckt hast, wird ihnen erst nach derselben Frist angezeigt.</li>
         <li>Deine Fang- und Entdeckungsfotos werden privat gespeichert und sind nur für dich und unsere Moderatoren sichtbar – sie werden niemals öffentlich angezeigt.</li>
         <li>Totem-Standorte erscheinen auf der Karte an einer ungefähren Position, niemals an deinem genauen Gerätestandort.</li>
         <li>Deine E-Mail, dein Passwort und dein genauer Standort werden anderen Spielern niemals angezeigt.</li>
+        <li>Eine Meldung wird dem gemeldeten Spieler oder der gemeldeten Crew nie angezeigt, eine Blockierung dem blockierten Spieler ebenso wenig.</li>
       </ul>
       <h3>6. Hosting und Auftragsverarbeiter</h3>
       <p>Unser Backend läuft auf Laravel Cloud (Amazon Web Services), Region EU. Wir setzen die folgenden Auftragsverarbeiter ein, jeweils ausschließlich für den genannten Zweck:</p>
@@ -428,7 +461,7 @@
       <h3>7. Wir verkaufen deine Daten nicht</h3>
       <p>Wir verkaufen, vermieten oder handeln deine personenbezogenen Daten an niemanden.</p>
       <h3>8. Wie lange wir deine Daten aufbewahren</h3>
-      <p>Wir bewahren deine Daten auf, solange dein Konto aktiv ist. Wenn du dein Konto löschst, werden deine personenbezogenen Daten – einschließlich deiner Fotos im Cloud-Speicher (Cloudflare R2) – gelöscht. Sicherheits-/Anti-Bot-Protokolle (z. B. IP) werden nur kurzzeitig aufbewahrt. Minimale Aufzeichnungen behalten wir nur dort, wo das Gesetz es vorschreibt.</p>
+      <p>Wir bewahren deine Daten auf, solange dein Konto aktiv ist. Wenn du dein Konto löschst, werden deine personenbezogenen Daten – einschließlich deiner Fotos im Cloud-Speicher (Cloudflare R2) – gelöscht. Sicherheits-/Anti-Bot-Protokolle (z. B. IP) werden nur kurzzeitig aufbewahrt. Minimale Aufzeichnungen behalten wir nur dort, wo das Gesetz es vorschreibt. Meldungen werden bis zu ihrer Prüfung und danach 12 Monate lang aufbewahrt; löschst du dein Konto, bleiben deine Meldungen bis dahin ohne deine Identität erhalten. Blockierungen werden aufbewahrt, bis du sie aufhebst oder dein Konto löschst.</p>
       <h3>9. Deine Rechte</h3>
       <ul>
         <li>Auskunft über die Daten, die wir über dich gespeichert haben;</li>
@@ -453,11 +486,12 @@
         <li>Du musst mindestens 13 Jahre alt sein, um die App zu nutzen. Wenn du das Alter der digitalen Einwilligung in deinem Land noch nicht erreicht hast, bestätigst du, dass ein Elternteil oder Erziehungsberechtigter diesen Bedingungen in deinem Namen zugestimmt hat.</li>
       </ul>
       <h3>2. Zulässige Nutzung</h3>
-      <p>Du verpflichtest dich, LettersCatch rechtmäßig und respektvoll zu nutzen. Du darfst nicht:</p>
+      <p>LettersCatch verfolgt eine Null-Toleranz-Politik gegenüber anstößigen Inhalten und missbräuchlichen Nutzern. Du verpflichtest dich, LettersCatch rechtmäßig und respektvoll zu nutzen. Du darfst nicht:</p>
       <ul>
         <li>Gegen geltendes Recht verstoßen oder Privateigentum betreten, um ein Totem zu erfassen;</li>
         <li>Identifizierbare Personen oder Privateigentum fotografieren;</li>
         <li>Inhalte einreichen, die illegal, anstößig oder irreführend sind oder die Rechte anderer verletzen;</li>
+        <li>Einen Spitznamen oder Crew-Namen wählen oder einen Totem-Namen vorschlagen, der beleidigend, hasserfüllt oder sexuell ist oder sich als jemand anderes ausgibt;</li>
         <li>Andere Spieler belästigen oder den Dienst missbrauchen;</li>
         <li>Die App oder ihre Systeme stören, zurückentwickeln (Reverse Engineering) oder sich unbefugten Zugriff darauf verschaffen.</li>
       </ul>
@@ -471,8 +505,14 @@
       </ul>
       <h3>5. Nutzerinhalte und Lizenz</h3>
       <p>Du behältst das Eigentum an den Fotos und Totems, die du einreichst. Durch das Einreichen gewährst du LettersCatch eine weltweite, nicht-exklusive, gebührenfreie Lizenz, diese Inhalte innerhalb der App zu hosten, zu speichern, zu vervielfältigen und anzuzeigen, um das Spiel zu betreiben, einschließlich der Speicherung in einem privaten Cloud-Speicher und der Prüfung durch unsere Moderatoren. Du sicherst zu, dass du das Recht hast, sie einzureichen, und dass sie weder gegen diese Bedingungen noch gegen ein Gesetz verstoßen.</p>
-      <h3>6. Moderation und Entfernung</h3>
+      <h3>6. Moderation, Meldungen und Blockieren</h3>
       <p>Eingereichte Inhalte durchlaufen eine menschliche Moderation. Wir können jeden Inhalt nach eigenem Ermessen prüfen, ablehnen, bearbeiten oder entfernen und die Gutschrift eines Fundes verweigern. Wir sind nicht verpflichtet, Inhalte zu veröffentlichen oder aufzubewahren.</p>
+      <ul>
+        <li>Spitznamen und Crew-Namen werden bei der Wahl automatisch geprüft; beleidigende werden abgelehnt.</li>
+        <li>Du kannst einen Spieler, eine Crew oder ein Totem in der App melden oder an support@dcyou.co schreiben. Ein Spitzname oder Crew-Name, den mehrere Spieler melden, wird für alle ausgeblendet, bis wir ihn geprüft haben.</li>
+        <li>Du kannst einen Spieler in der App blockieren: Du siehst seinen Spitznamen nicht mehr – in Ranglisten, in deiner Crew oder bei den Totems, die er entdeckt hat – und auch nicht den Namen einer Crew, die er leitet, und keiner von euch kann einer Crew beitreten, in der der andere ist. Du kannst die Blockierung jederzeit aufheben.</li>
+        <li>Wir prüfen jede Meldung innerhalb von 24 Stunden. Inhalte, die gegen diese Nutzungsbedingungen verstoßen, werden entfernt – der Spitzname oder Crew-Name wird ersetzt, das Totem zurückgezogen – und das Konto der Person, die sie eingestellt hat, wird gesperrt oder bei schwerem oder wiederholtem Missbrauch dauerhaft ausgeschlossen.</li>
+      </ul>
       <h3>7. Verfügbarkeit und Änderungen</h3>
       <p>Die App wird &quot;wie besehen&quot; angeboten. Wir können Funktionen jederzeit hinzufügen, ändern, aussetzen oder einstellen und garantieren keine ununterbrochene oder fehlerfreie Verfügbarkeit.</p>
       <h3>8. Keine Gewährleistung</h3>
@@ -505,6 +545,7 @@
         <li>Indirizzo IP — per limitare la frequenza delle richieste e bloccare gli abusi automatizzati (anti-bot).</li>
         <li>Dati di gioco — punti, catture e classifiche.</li>
         <li>Token di autenticazione — memorizzato sul tuo dispositivo per mantenerti connesso.</li>
+        <li>Segnalazioni e blocchi — quando segnali un giocatore, una Crew o un Totem, conserviamo chi ha segnalato cosa, quando e perché (un motivo scelto da un elenco, senza testo libero); quando blocchi un giocatore, conserviamo questa scelta.</li>
       </ul>
       <p>Mostriamo annunci pubblicitari tramite Google AdMob nell'app mobile. L'app richiede a Google annunci non personalizzati su tutte le piattaforme, quindi gli annunci mostrati non sono personalizzati. Quando il consenso è richiesto (in particolare nell'UE), lo chiediamo tramite il modulo di Google (UMP), e puoi rifiutarlo. L'app non chiede mai il permesso di tracciarti e non mostra alcuna richiesta di tracciamento su nessuna piattaforma. Se hai consentito il tracciamento in una versione precedente dell'app per iOS, puoi revocare questo permesso in qualsiasi momento in Impostazioni › Privacy e sicurezza › Tracciamento del tuo dispositivo. Non vendiamo i tuoi dati.</p>
       <p>Misurazione anonima dell'audience con Pulse: a ogni apertura, l'app invia al nostro servizio Pulse il nome dell'app, la versione, la piattaforma e la lingua, al solo scopo di misurare l'audience. Pulse non installa alcun cookie e l'app non invia alcun identificativo dell'utente o del dispositivo. Un visitatore unico giornaliero viene calcolato lato server a partire dai dati tecnici della richiesta tramite un hash con sale non reversibile; solo questo hash viene conservato per questo conteggio.</p>
@@ -526,9 +567,11 @@
       <h3>5. Chi può vedere i tuoi dati</h3>
       <ul>
         <li>Il tuo nickname e i tuoi risultati di gioco possono essere visibili ad altri giocatori (ad esempio nelle classifiche).</li>
+        <li>Le tue catture non vengono mai mostrate agli altri giocatori con il tuo nickname: sanno soltanto, ore dopo, che qualcuno ha catturato un Totem — oggi, questa settimana o prima, mai l'ora esatta. Che hai scoperto un nuovo Totem viene mostrato loro solo dopo lo stesso intervallo.</li>
         <li>Le tue foto di cattura e di scoperta sono archiviate in modo privato e visibili solo a te e ai nostri moderatori — non vengono mai mostrate pubblicamente.</li>
         <li>Le posizioni dei Totem appaiono sulla mappa in una posizione approssimativa, mai la posizione esatta del tuo dispositivo.</li>
         <li>La tua email, la tua password e la tua posizione precisa non vengono mai mostrate ad altri giocatori.</li>
+        <li>Una segnalazione non viene mai mostrata al giocatore o alla Crew segnalati, né un blocco al giocatore bloccato.</li>
       </ul>
       <h3>6. Hosting e responsabili del trattamento</h3>
       <p>Il nostro backend è eseguito su Laravel Cloud (Amazon Web Services), regione UE. Ci avvaliamo dei seguenti responsabili del trattamento, ciascuno esclusivamente per la finalità indicata:</p>
@@ -542,7 +585,7 @@
       <h3>7. Non vendiamo i tuoi dati</h3>
       <p>Non vendiamo, affittiamo né scambiamo i tuoi dati personali con nessuno.</p>
       <h3>8. Per quanto tempo conserviamo i tuoi dati</h3>
-      <p>Conserviamo i tuoi dati finché il tuo account è attivo. Quando elimini il tuo account, i tuoi dati personali — comprese le tue foto sull'archiviazione cloud (Cloudflare R2) — vengono eliminati. I log di sicurezza/anti-bot (ad esempio l'IP) vengono conservati solo per un breve periodo. Conserviamo registrazioni minime soltanto laddove la legge lo richiede.</p>
+      <p>Conserviamo i tuoi dati finché il tuo account è attivo. Quando elimini il tuo account, i tuoi dati personali — comprese le tue foto sull'archiviazione cloud (Cloudflare R2) — vengono eliminati. I log di sicurezza/anti-bot (ad esempio l'IP) vengono conservati solo per un breve periodo. Conserviamo registrazioni minime soltanto laddove la legge lo richiede. Le segnalazioni sono conservate fino al loro esame e poi per 12 mesi; se elimini il tuo account, quelle che hai fatto restano, senza la tua identità, fino a tale scadenza. I blocchi sono conservati finché non li rimuovi o non elimini il tuo account.</p>
       <h3>9. I tuoi diritti</h3>
       <ul>
         <li>Accedere ai dati che conserviamo su di te;</li>
@@ -567,11 +610,12 @@
         <li>Devi avere almeno 13 anni per utilizzare l'app. Se non hai l'età del consenso digitale nel tuo Paese, confermi che un genitore o tutore ha accettato questi Termini per tuo conto.</li>
       </ul>
       <h3>2. Uso accettabile</h3>
-      <p>Accetti di utilizzare LettersCatch in modo lecito e rispettoso. Non devi:</p>
+      <p>LettersCatch applica una tolleranza zero verso i contenuti inappropriati e gli utenti che commettono abusi. Accetti di utilizzare LettersCatch in modo lecito e rispettoso. Non devi:</p>
       <ul>
         <li>Violare alcuna legge applicabile, né introdurti in una proprietà privata per catturare un Totem;</li>
         <li>Fotografare persone identificabili o proprietà private;</li>
         <li>Inviare contenuti illegali, offensivi, ingannevoli o che violino i diritti di terzi;</li>
+        <li>Scegliere un nickname o un nome di Crew, o proporre un nome di Totem, offensivo, d'odio o a sfondo sessuale, o che si spacci per qualcun altro;</li>
         <li>Molestare altri giocatori o abusare del servizio;</li>
         <li>Disturbare, decodificare o ottenere accesso non autorizzato all'app o ai suoi sistemi.</li>
       </ul>
@@ -585,8 +629,14 @@
       </ul>
       <h3>5. Contenuti dell'utente e licenza</h3>
       <p>Mantieni la proprietà delle foto e dei Totem che invii. Inviandoli, concedi a LettersCatch una licenza mondiale, non esclusiva e gratuita per ospitare, archiviare, riprodurre e mostrare tali contenuti all'interno dell'app al fine di gestire il gioco, inclusa l'archiviazione su un cloud privato e la revisione da parte dei nostri moderatori. Dichiari di avere il diritto di inviarli e che non violano le presenti Condizioni né alcuna legge.</p>
-      <h3>6. Moderazione e rimozione</h3>
+      <h3>6. Moderazione, segnalazioni e blocco</h3>
       <p>I contenuti inviati vengono sottoposti a moderazione umana. Possiamo esaminare, rifiutare, modificare o rimuovere qualsiasi contenuto, e rifiutarci di accreditare una scoperta, a nostra discrezione. Non siamo obbligati a pubblicare o conservare alcun contenuto.</p>
+      <ul>
+        <li>I nickname e i nomi di Crew vengono controllati automaticamente quando vengono scelti, e quelli offensivi vengono rifiutati.</li>
+        <li>Puoi segnalare un giocatore, una Crew o un Totem dall'app, oppure scrivendo a support@dcyou.co. Un nickname o un nome di Crew segnalato da più giocatori viene nascosto a tutti finché non lo esaminiamo.</li>
+        <li>Puoi bloccare un giocatore dall'app: non vedi più il suo nickname — nelle classifiche, nella tua Crew o sui Totem che ha scoperto — né il nome di una Crew che guida, e nessuno dei due può unirsi a una Crew in cui si trova l'altro. Puoi sbloccarlo in qualsiasi momento.</li>
+        <li>Esaminiamo ogni segnalazione entro 24 ore. I contenuti che violano queste Condizioni vengono rimossi — il nickname o il nome di Crew viene sostituito, il Totem ritirato — e l'account del loro autore viene sospeso o, in caso di abuso grave o ripetuto, bannato definitivamente.</li>
+      </ul>
       <h3>7. Disponibilità e modifiche</h3>
       <p>L'app è offerta &quot;così com'è&quot;. Possiamo aggiungere, modificare, sospendere o interrompere funzionalità in qualsiasi momento e non garantiamo una disponibilità ininterrotta o priva di errori.</p>
       <h3>8. Esclusione di garanzia</h3>
@@ -619,6 +669,7 @@
         <li>Endereço IP — para limitar a taxa de solicitações e bloquear abusos automatizados (anti-bot).</li>
         <li>Dados de jogo — pontos, capturas e classificações.</li>
         <li>Token de autenticação — armazenado no seu dispositivo para que você permaneça conectado.</li>
+        <li>Denúncias e bloqueios — quando você denuncia um jogador, um Crew ou um Totem, guardamos quem denunciou o quê, quando e por quê (um motivo escolhido de uma lista, sem texto livre); quando você bloqueia um jogador, guardamos essa escolha.</li>
       </ul>
       <p>Exibimos anúncios por meio do Google AdMob no aplicativo móvel. O aplicativo pede ao Google anúncios não personalizados em todas as plataformas, de modo que os anúncios exibidos não são personalizados. Quando o consentimento é exigido (em particular na UE), nós o solicitamos pelo próprio formulário do Google (UMP), e você pode recusar. O aplicativo nunca pede permissão para rastrear você nem exibe qualquer aviso de rastreamento em nenhuma plataforma. Se você permitiu o rastreamento em uma versão anterior do aplicativo para iOS, pode retirar essa permissão a qualquer momento em Ajustes › Privacidade e Segurança › Rastreamento do seu aparelho. Não vendemos os seus dados.</p>
       <p>Medição de audiência anônima com o Pulse: cada vez que o aplicativo é aberto, ele envia ao nosso serviço Pulse o nome do aplicativo, a versão, a plataforma e o idioma, unicamente para medir a audiência. O Pulse não instala nenhum cookie e o aplicativo não envia nenhum identificador de usuário ou de dispositivo. Um visitante único diário é calculado no servidor a partir dos dados técnicos da solicitação por meio de um hash com sal e irreversível; somente esse hash é armazenado para essa contagem.</p>
@@ -640,9 +691,11 @@
       <h3>5. Quem pode ver seus dados</h3>
       <ul>
         <li>Seu apelido e suas conquistas no jogo podem ficar visíveis para outros jogadores (por exemplo, nas classificações).</li>
+        <li>Suas capturas nunca são mostradas a outros jogadores com o seu apelido: eles só ficam sabendo, horas depois, que alguém capturou um Totem — hoje, nesta semana ou antes, nunca o horário exato. Que você descobriu um novo Totem só aparece para eles após o mesmo prazo.</li>
         <li>Suas fotos de captura e descoberta são armazenadas de forma privada e visíveis apenas para você e nossos moderadores — elas nunca são exibidas publicamente.</li>
         <li>Os locais dos Totems aparecem no mapa em uma posição aproximada, nunca a localização exata do seu dispositivo.</li>
         <li>Seu e-mail, sua senha e sua localização precisa nunca são mostrados a outros jogadores.</li>
+        <li>Uma denúncia nunca é mostrada ao jogador ou ao Crew denunciado, nem um bloqueio ao jogador bloqueado.</li>
       </ul>
       <h3>6. Hospedagem e operadores</h3>
       <p>Nosso backend roda na Laravel Cloud (Amazon Web Services), região da UE. Recorremos aos seguintes operadores, cada um apenas para a finalidade indicada:</p>
@@ -656,7 +709,7 @@
       <h3>7. Não vendemos seus dados</h3>
       <p>Não vendemos, alugamos nem trocamos seus dados pessoais com ninguém.</p>
       <h3>8. Por quanto tempo guardamos seus dados</h3>
-      <p>Mantemos seus dados enquanto sua conta estiver ativa. Quando você exclui sua conta, seus dados pessoais — incluindo suas fotos no armazenamento em nuvem (Cloudflare R2) — são apagados. Os registros de segurança/anti-bot (por exemplo, o IP) são mantidos apenas por um breve período. Mantemos registros mínimos somente quando a lei exige.</p>
+      <p>Mantemos seus dados enquanto sua conta estiver ativa. Quando você exclui sua conta, seus dados pessoais — incluindo suas fotos no armazenamento em nuvem (Cloudflare R2) — são apagados. Os registros de segurança/anti-bot (por exemplo, o IP) são mantidos apenas por um breve período. Mantemos registros mínimos somente quando a lei exige. As denúncias são mantidas até serem analisadas e, depois, por 12 meses; se você excluir sua conta, as que você fez são mantidas sem a sua identidade até esse prazo. Os bloqueios são mantidos até você removê-los ou excluir sua conta.</p>
       <h3>9. Seus direitos</h3>
       <ul>
         <li>Acessar os dados que mantemos sobre você;</li>
@@ -681,11 +734,12 @@
         <li>Você deve ter pelo menos 13 anos para usar o aplicativo. Se você não tiver a idade de consentimento digital no seu país, confirma que um dos pais ou responsável concordou com estes Termos em seu nome.</li>
       </ul>
       <h3>2. Uso aceitável</h3>
-      <p>Você concorda em usar o LettersCatch de forma legal e respeitosa. Você não deve:</p>
+      <p>O LettersCatch tem tolerância zero com conteúdo censurável e com usuários abusivos. Você concorda em usar o LettersCatch de forma legal e respeitosa. Você não deve:</p>
       <ul>
         <li>Violar qualquer lei aplicável nem invadir propriedade privada para capturar um Totem;</li>
         <li>Fotografar pessoas identificáveis ou propriedades privadas;</li>
         <li>Enviar conteúdo ilegal, ofensivo, enganoso ou que viole os direitos de terceiros;</li>
+        <li>Escolher um apelido ou um nome de Crew, ou propor um nome de Totem, que seja ofensivo, de ódio ou sexual, ou que se passe por outra pessoa;</li>
         <li>Assediar outros jogadores ou abusar do serviço;</li>
         <li>Atrapalhar, fazer engenharia reversa ou obter acesso não autorizado ao aplicativo ou aos seus sistemas.</li>
       </ul>
@@ -699,8 +753,14 @@
       </ul>
       <h3>5. Conteúdo do usuário e licença</h3>
       <p>Você mantém a propriedade das fotos e dos Totems que envia. Ao enviá-los, você concede ao LettersCatch uma licença mundial, não exclusiva e isenta de royalties para hospedar, armazenar, reproduzir e exibir esse conteúdo dentro do aplicativo a fim de operar o jogo, incluindo o armazenamento em nuvem privada e a revisão por nossos moderadores. Você declara que tem o direito de enviá-lo e que ele não viola estes Termos nem qualquer lei.</p>
-      <h3>6. Moderação e remoção</h3>
+      <h3>6. Moderação, denúncias e bloqueio</h3>
       <p>O conteúdo enviado passa por moderação humana. Podemos analisar, rejeitar, editar ou remover qualquer conteúdo e recusar o crédito de uma descoberta, a nosso critério. Não somos obrigados a publicar nem a manter qualquer conteúdo.</p>
+      <ul>
+        <li>Apelidos e nomes de Crew são verificados automaticamente quando escolhidos, e os ofensivos são recusados.</li>
+        <li>Você pode denunciar um jogador, um Crew ou um Totem pelo aplicativo, ou escrevendo para support@dcyou.co. Um apelido ou nome de Crew denunciado por vários jogadores fica oculto para todos até a nossa análise.</li>
+        <li>Você pode bloquear um jogador pelo aplicativo: deixa de ver o apelido dele — nas classificações, no seu Crew ou nos Totems que ele descobriu — e o nome de um Crew que ele lidere, e nenhum dos dois pode entrar em um Crew em que o outro esteja. Você pode desbloqueá-lo a qualquer momento.</li>
+        <li>Analisamos cada denúncia em até 24 horas. O conteúdo que viola estes Termos é removido — o apelido ou o nome de Crew é substituído, o Totem é retirado — e a conta do autor é suspensa ou, em caso de abuso grave ou repetido, banida permanentemente.</li>
+      </ul>
       <h3>7. Disponibilidade e alterações</h3>
       <p>O aplicativo é oferecido &quot;no estado em que se encontra&quot;. Podemos adicionar, alterar, suspender ou descontinuar recursos a qualquer momento e não garantimos disponibilidade ininterrupta ou livre de erros.</p>
       <h3>8. Ausência de garantia</h3>
